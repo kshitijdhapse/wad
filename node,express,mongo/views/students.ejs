@@ -1,0 +1,38 @@
+<!-- students.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Data</title>
+</head>
+<body>
+  <h1>Student Data</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>WAD</th>
+        <th>DSBDA</th>
+        <th>CNS</th>
+        <th>CC</th>
+        <th>AI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% students.forEach(student => { %>
+        <tr>
+          <td><%= student.Name %></td>
+          <td><%= student.Roll_No %></td>
+          <td><%= student.WAD_Marks %></td>
+          <td><%= student.DSBDA_Marks %></td>
+          <td><%= student.CNS_Marks %></td>
+          <td><%= student.CC_Marks %></td>
+          <td><%= student.AI_Marks %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
